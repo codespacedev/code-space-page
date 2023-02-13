@@ -28,7 +28,7 @@ jobs:
         run: |
           ls -lah || true
           ls -lah themes || true
-          ls -lah themes LoveIt || true
+          ls -lah themes/LoveIt || true
           hugo version || true
           hugo --minify
       - name: "Deploy"
