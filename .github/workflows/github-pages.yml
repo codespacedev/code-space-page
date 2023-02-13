@@ -28,7 +28,7 @@ jobs:
         with:
           hugo-version: 'latest'
       - name: "Build"
-        run: hugo --minify
+        run: mkdir -p website && hugo --minify
       - name: "Deploy"
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
