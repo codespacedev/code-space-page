@@ -26,8 +26,10 @@ jobs:
           hugo-version: 'latest'
       - name: "Build"
         run: |
-          ls -lah
-          hugo version
+          ls -lah || true
+          ls -lah themes || true
+          ls -lah themes LoveIt || true
+          hugo version || true
           hugo --minify
       - name: "Deploy"
         uses: peaceiris/actions-gh-pages@v3
