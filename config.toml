@@ -1,3 +1,4 @@
+### SEE https://hugoloveit.com/theme-documentation-basics/#site-configuration
 baseURL = 'https://code-space.dev/'
 title = 'Code Space'
 theme = 'LoveIt'
@@ -23,7 +24,7 @@ enableEmoji = true
 
 # Author config
 [author]
-name = "Yuna"
+name = "Yuna Morgenstern"
 email = "info@code-space.dev"
 link = ""
 
@@ -43,21 +44,33 @@ title = ""
 
 [[menu.main]]
 weight = 2
-identifier = "tags"
+identifier = "privacy_policy"
+# you can add extra information before the name (HTML format is supported), such as icons
 pre = ""
+# you can add extra information after the name (HTML format is supported), such as icons
 post = ""
-name = "Tags"
-url = "/tags/"
+name = "Privacy Policy"
+url = "/page/privacy_policy"
+# title will be shown when you hover on this menu link
 title = ""
-
-[[menu.main]]
-weight = 3
-identifier = "categories"
-pre = ""
-post = ""
-name = "Categories"
-url = "/categories/"
-title = ""
+#
+#[[menu.main]]
+#weight = 2
+#identifier = "tags"
+#pre = ""
+#post = ""
+#name = "Tags"
+#url = "/tags/"
+#title = ""
+#
+#[[menu.main]]
+#weight = 3
+#identifier = "categories"
+#pre = ""
+#post = ""
+#name = "Categories"
+#url = "/categories/"
+#title = ""
 
 [params]
 # site default theme ["auto", "light", "dark"]
@@ -66,15 +79,15 @@ defaultTheme = "auto"
 gitRepo = "https://github.com/codespacedev/code-space-page"
 #  which hash function used for SRI, when empty, no SRI is used
 # ["sha256", "sha384", "sha512", "md5"]
-fingerprint = ""
+fingerprint = "sha256"
 #  date format
 dateFormat = "2006-01-02"
 # website title for Open Graph and Twitter Cards
-title = "My cool site"
+title = "Code Space"
 # website description for RSS, SEO, Open Graph and Twitter Cards
-description = "This is my cool site"
+description = "The future of coding! Imagine building & managing biz in a 3D world, spotting problems in real-time & working together like in a real office. No need to be an expert"
 # website images for Open Graph and Twitter Cards
-images = ["/logo.png"]
+images = ["/images/logo.jpg"]
 
 # Header config
 [params.header]
@@ -85,9 +98,9 @@ mobileMode = "auto"
 #  Header title config
 [params.header.title]
 # URL of the LOGO
-logo = ""
+logo = "/images/logo.png"
 # title name
-name = ""
+name = "Code Space"
 # you can add extra information before the name (HTML format is supported), such as icons
 pre = ""
 # you can add extra information after the name (HTML format is supported), such as icons
@@ -99,24 +112,24 @@ typeit = false
 [params.footer]
 enable = true
 #  Custom content (HTML format is supported)
-custom = ''
+#custom = ''
 #  whether to show Hugo and theme info
-hugo = true
+hugo = false
 #  whether to show copyright info
 copyright = true
 #  whether to show the author
 author = true
 # Site creation time
-since = 2019
+since = 2023
 # ICP info only in China (HTML format is supported)
 icp = ""
 # license info (HTML format is supported)
-license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+#license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
 #  Section (all posts) page config
 [params.section]
 # special amount of posts in each section page
-paginate = 20
+paginate = 10
 # date format (month and day)
 dateFormat = "01-02"
 # amount of RSS pages
@@ -125,7 +138,7 @@ rss = 10
 #  List (category or tag) page config
 [params.list]
 # special amount of posts in each list page
-paginate = 20
+paginate = 10
 # date format (month and day)
 dateFormat = "01-02"
 # amount of RSS pages
@@ -134,7 +147,7 @@ rss = 10
 #  App icon config
 [params.app]
 # optional site title override for the app when added to an iOS home screen or Android launcher
-title = "My cool site"
+title = "Code Space"
 # whether to omit favicon resource links
 noFavicon = false
 # modern SVG favicon to use in place of older style .png and .ico files
@@ -178,17 +191,17 @@ enable = true
 # Gravatar Email for preferred avatar in home page
 gravatarEmail = ""
 # URL of avatar shown in home page
-avatarURL = "/images/avatar.png"
+avatarURL = "/images/logo.png"
 #  title shown in home page (HTML format is supported)
-title = ""
+title = "Code Space"
 # subtitle shown in home page (HTML format is supported)
-subtitle = "This is My New Hugo Site"
+subtitle = "C_ The next generation of coding!"
 # whether to use typeit animation for subtitle
 typeit = true
 # whether to show social links
 social = true
 #  disclaimer (HTML format is supported)
-disclaimer = ""
+disclaimer = "<h1>Coding just like a Game!</h1><h3>Are you ready for the next generation of coding?</h3> <p><b>\"C_\"</b> <i>(Code Space)</i> is a revolutionary new project that makes coding fun and easy for everyone</p><p>You can build and manage your own businesses in a <b>3D world</b>, just like building with blocks.</p> <p>Imagine being able to see and fly over all your services and infrastructure in a 3D world, <b>spotting bottlenecks, traffic and errors in real-time</b>, and even <b>working together</b> with your team just like in a real office.</p> <p>With <b>virtual meeting rooms, avatars, and gamification features, [...]</b>, you can bring your remote team together and foster collaboration and teamwork.</p> <p>And the best part? <b>You don't need to be a coding expert to use it!</b> Even children can understand it!</p><p>Join us on this exciting journey and be a part of the future of coding.</p><h3> Are you in?</h3>"
 # Home page posts
 [params.home.posts]
 enable = true
@@ -200,12 +213,12 @@ defaultHiddenFromHomePage = false
 
 # Social config about the author
 [params.social]
-GitHub = "xxxx"
-Linkedin = ""
-Twitter = "xxxx"
-Instagram = "xxxx"
-Facebook = "xxxx"
-Telegram = "xxxx"
+GitHub = "codespacedev"
+Linkedin = "yuna-morgenstern-6662a5145/"
+Twitter = "YunaMorgenstern"
+Instagram = ""
+Facebook = ""
+Telegram = ""
 Medium = ""
 Gitlab = ""
 Youtubelegacy = ""
@@ -224,7 +237,7 @@ Weibo = ""
 Odnoklassniki = ""
 VK = ""
 Flickr = ""
-Xing = ""
+Xing = "Yuna_Morgenstern/"
 Snapchat = ""
 Soundcloud = ""
 Spotify = ""
@@ -255,7 +268,7 @@ Wordpress = ""
 Vine = ""
 Googlescholar = ""
 Researchgate = ""
-Mastodon = ""
+Mastodon = "https://hachyderm.io/@LunaFreyja"
 Thingiverse = ""
 Devto = ""
 Gitea = ""
@@ -273,7 +286,7 @@ Plume = ""
 HackTheBox = ""
 RootMe = ""
 Phone = ""
-Email = "xxxx@xxxx.com"
+Email = "info@code-space.dev"
 RSS = true #
 
 #  Page global config
@@ -345,19 +358,19 @@ enable = true
 Twitter = true
 Facebook = true
 Linkedin = false
-Whatsapp = false
+Whatsapp = true
 Pinterest = false
 Tumblr = false
 HackerNews = true
-Reddit = false
+Reddit = true
 VK = false
 Buffer = false
-Xing = false
-Line = true
+Xing = true
+Line = false
 Instapaper = false
 Pocket = false
 Flipboard = false
-Weibo = true
+Weibo = false
 Blogger = false
 Baidu = false
 Odnoklassniki = false
@@ -523,7 +536,7 @@ id = ""
 enable = true
 # text strings used for Cookie consent banner
 [params.cookieconsent.content]
-message = ""
+message = "This website uses functional Cookies. E.g. For the Day and Night Theme setting. No Personal will be processed or forwarded"
 dismiss = ""
 link = ""
 
@@ -568,9 +581,9 @@ typographer = true
 # whether to use HTML tags directly in the document
 unsafe = true
 # Table Of Contents settings
-[markup.tableOfContents]
-startLevel = 2
-endLevel = 6
+#[markup.tableOfContents]
+#startLevel = 2
+#endLevel = 6
 
 # Sitemap config
 [sitemap]
