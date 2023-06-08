@@ -6,9 +6,12 @@ on:
   push:
     branches: [ 'main' ]
 
+concurrency: publish_pages_lock
+
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       # needs to git diff the repo
       contents: write
@@ -16,18 +19,27 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/checkout@v3
+      - name: "Checkout"
+        uses: actions/checkout@v3
         with:
           submodules: recursive  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          fetch-depth: 1    # Fetch all history for .GitInfo and .Lastmod
       - name: "Setup Hugo"
+        id: pages
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
-#          hugo-version: '0.91.2'
-      - name: "Build"
-        run: hugo --minify
+      #          hugo-version: '0.91.2'
+      - name: "NPM build"
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: "Hugo Build"
+        env:
+          # For maximum backward compatibility with Hugo modules
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: hugo && hugo --minify
+      #        run: hugo && hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: "Deploy"
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
