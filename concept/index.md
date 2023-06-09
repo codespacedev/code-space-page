@@ -72,6 +72,6 @@ Code-Space empowers companies to enhance collaboration, accelerate development p
 within the Cloud ecosystem. By providing a visually immersive and interactive experience, it revolutionizes the way
 companies utilize and manage their Cloud infrastructure.
 
-![testebenen](/images/c_space_data_storage.png)
+![c_space_data_storage](/images/content/c_space_data_storage.png)
 
 
